@@ -1,0 +1,44 @@
+[25-Mar-2026 08:25:01 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'available_seats' in 'field list' in C:\xampp\htdocs\ems4\course-form.php:61
+Stack trace:
+#0 C:\xampp\htdocs\ems4\course-form.php(61): mysqli->prepare('INSERT INTO cou...')
+#1 {main}
+  thrown in C:\xampp\htdocs\ems4\course-form.php on line 61
+[25-Mar-2026 08:25:07 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'available_seats' in 'field list' in C:\xampp\htdocs\ems4\course-form.php:61
+Stack trace:
+#0 C:\xampp\htdocs\ems4\course-form.php(61): mysqli->prepare('INSERT INTO cou...')
+#1 {main}
+  thrown in C:\xampp\htdocs\ems4\course-form.php on line 61
+[25-Mar-2026 08:38:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function array_zip() in C:\xampp\htdocs\ems4\review.php:181
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\ems4\review.php on line 181
+[25-Mar-2026 08:38:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function array_zip() in C:\xampp\htdocs\ems4\review.php:181
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\ems4\review.php on line 181
+[25-Mar-2026 08:39:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function array_zip() in C:\xampp\htdocs\ems4\review.php:181
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\ems4\review.php on line 181
+[25-Mar-2026 08:49:17 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'c.image_path' in 'field list' in C:\xampp\htdocs\ems4\courses.php:67
+Stack trace:
+#0 C:\xampp\htdocs\ems4\courses.php(67): mysqli->prepare('\n    SELECT c.c...')
+#1 {main}
+  thrown in C:\xampp\htdocs\ems4\courses.php on line 67
+[25-Mar-2026 08:49:21 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'c.image_path' in 'field list' in C:\xampp\htdocs\ems4\courses.php:67
+Stack trace:
+#0 C:\xampp\htdocs\ems4\courses.php(67): mysqli->prepare('\n    SELECT c.c...')
+#1 {main}
+  thrown in C:\xampp\htdocs\ems4\courses.php on line 67
+[25-Mar-2026 08:57:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function array_zip() in C:\xampp\htdocs\ems4\review.php:181
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\ems4\review.php on line 181
+[25-Mar-2026 08:57:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function array_zip() in C:\xampp\htdocs\ems4\review.php:181
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\ems4\review.php on line 181
+[25-Mar-2026 09:02:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function array_zip() in C:\xampp\htdocs\ems4\review.php:181
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\ems4\review.php on line 181
