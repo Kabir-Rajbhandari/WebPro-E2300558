@@ -1,10 +1,4 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: courses.php
- * Page: Course Listing (Public)
- * Description: Browse, search, and filter all available courses.
- */
 
 require_once 'php/config.php';
 

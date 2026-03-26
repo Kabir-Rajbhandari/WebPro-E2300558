@@ -51,9 +51,7 @@ $db->close();
 include 'includes/header.php';
 ?>
 
-<!-- ============================================================
-     HERO SECTION
-     ============================================================ -->
+<!-- Hero Section-->
 <section class="hero-section" role="banner">
   <div class="container">
     <div class="row align-items-center">
@@ -158,9 +156,7 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ============================================================
-     STATS SECTION
-     ============================================================ -->
+<!-- Section -->
 <section class="stats-section" aria-label="Platform statistics">
   <div class="container">
     <div class="row">
@@ -192,9 +188,7 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ============================================================
-     LATEST COURSES
-     ============================================================ -->
+<!-- Latest Section -->
 <section class="section-padding" aria-label="Latest courses">
   <div class="container">
     <div class="section-heading" data-aos="fade-up">
@@ -285,9 +279,7 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ============================================================
-     HOW IT WORKS
-     ============================================================ -->
+<!-- works section-->
 <section class="section-padding bg-light-custom" aria-label="How it works">
   <div class="container">
     <div class="section-heading" data-aos="fade-up">
@@ -355,9 +347,7 @@ include 'includes/header.php';
 </section>
 <?php endif; ?>
 
-<!-- ============================================================
-     CTA BANNER
-     ============================================================ -->
+<!-- CTA banner section-->
 <section style="background:linear-gradient(135deg,var(--primary),var(--accent));padding:70px 0;"
          data-aos="fade-up" aria-label="Call to action">
   <div class="container text-center text-white">

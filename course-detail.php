@@ -1,10 +1,5 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: course-detail.php
- * Page: Course Detail (All Roles)
- * Description: Full course info, enrol button, learner reviews.
- */
+
 
 require_once 'php/config.php';
 

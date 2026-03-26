@@ -1,6 +1,5 @@
 /**
- * Main JavaScript - form validation, animations, notifications
- */
+ * Main JavaScript 
 
 /* INITIALIZATION */
 $(document).ready(function () {
@@ -23,7 +22,6 @@ $(document).ready(function () {
 });
 
 /* NAVBAR */
-// Add shadow to navbar when scrolled
 function initStickyNavbar() {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 20) {
@@ -50,7 +48,6 @@ function highlightActiveNav() {
 }
 
 /* TOAST NOTIFICATIONS */
-// Show notification message
 function showToast(message, type = "success", duration = 4000) {
   var iconMap = {
     success: "fa-check-circle",
@@ -91,7 +88,7 @@ function showToast(message, type = "success", duration = 4000) {
   }, duration);
 }
 
-/* FORM VALIDATION HELPERS */
+/* FORM VALIDATION */
 // Check if email is valid
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -130,9 +127,6 @@ function clearValidation($form) {
   $form.find(".invalid-feedback").hide();
 }
 
-/* ============================================================
-   LOGIN FORM VALIDATION
-   ============================================================ */
 $("#loginForm").on("submit", function (e) {
   var isValid = true;
   clearValidation($(this));
@@ -165,9 +159,6 @@ $("#loginForm").on("submit", function (e) {
   }
 });
 
-/* ============================================================
-   SIGNUP FORM VALIDATION
-   ============================================================ */
 $("#signupForm").on("submit", function (e) {
   var isValid = true;
   clearValidation($(this));
@@ -248,9 +239,6 @@ $("#signupForm").on("submit", function (e) {
   }
 });
 
-/* ============================================================
-   ENROLLMENT FORM VALIDATION
-   ============================================================ */
 $("#enrollmentForm").on("submit", function (e) {
   var isValid = true;
   clearValidation($(this));
@@ -285,9 +273,6 @@ $("#enrollmentForm").on("submit", function (e) {
   }
 });
 
-/* ============================================================
-   CONTACT FORM VALIDATION
-   ============================================================ */
 $("#contactForm").on("submit", function (e) {
   e.preventDefault();
   var isValid = true;
@@ -335,9 +320,6 @@ $("#contactForm").on("submit", function (e) {
   }
 });
 
-/* ============================================================
-   REVIEW FORM VALIDATION
-   ============================================================ */
 $("#reviewForm").on("submit", function (e) {
   var isValid = true;
   var ratingVal = $('input[name="rating"]:checked').val();
@@ -358,9 +340,6 @@ $("#reviewForm").on("submit", function (e) {
   if (!isValid) e.preventDefault();
 });
 
-/* ============================================================
-   COURSE FORM VALIDATION (PROVIDER)
-   ============================================================ */
 $("#courseForm").on("submit", function (e) {
   var isValid = true;
   clearValidation($(this));
@@ -410,9 +389,6 @@ $("#courseForm").on("submit", function (e) {
   }
 });
 
-/* ============================================================
-   PASSWORD STRENGTH METER
-   ============================================================ */
 $("#signupPassword").on("input", function () {
   var val = $(this).val();
   var strength = 0;
@@ -438,21 +414,10 @@ $("#signupPassword").on("input", function () {
     .css("color", colors[strength]);
 });
 
-/* ============================================================
-   PRINT RECEIPT
-   ============================================================ */
 function printReceipt() {
   window.print();
 }
 
-/* ============================================================
-   CONFIRM DELETE
-   ============================================================ */
-/**
- * Shows a Bootstrap confirmation modal before deleting a record.
- * @param {string} courseId  - ID of the course to delete.
- * @param {string} courseName - Name of the course.
- */
 function confirmDelete(courseId, courseName) {
   $("#deleteCourseName").text(courseName);
   $("#deleteForm").attr("action", "php/delete_course.php");
@@ -460,9 +425,6 @@ function confirmDelete(courseId, courseName) {
   $("#deleteModal").modal("show");
 }
 
-/* ============================================================
-   ANIMATED COUNTER (Stats Section)
-   ============================================================ */
 function animateCounters() {
   $(".stat-number[data-target]").each(function () {
     var $this = $(this);
@@ -495,9 +457,6 @@ $(window).scroll(function () {
   }
 });
 
-/* ============================================================
-   FILE UPLOAD PREVIEW
-   ============================================================ */
 $("#providerDocument, #uploadDocument").on("change", function () {
   var file = this.files[0];
   var $preview = $("#filePreview");
@@ -524,9 +483,6 @@ $("#providerDocument, #uploadDocument").on("change", function () {
   }
 });
 
-/* ============================================================
-   PAYMENT PAGE MOCK
-   ============================================================ */
 $("#paymentForm").on("submit", function (e) {
   var isValid = true;
   clearValidation($(this));
@@ -594,9 +550,6 @@ $("#cardExpiry").on("input", function () {
   $(this).val(val);
 });
 
-/* ============================================================
-   SEARCH / FILTER COURSES (front-end filtering)
-   ============================================================ */
 $("#courseSearch").on("input", function () {
   var query = $(this).val().toLowerCase();
   filterCourses(query, $("#categoryFilter").val());
@@ -607,11 +560,6 @@ $("#categoryFilter").on("change", function () {
   filterCourses($("#courseSearch").val().toLowerCase(), category);
 });
 
-/**
- * Filters course cards based on search text and category.
- * @param {string} query    - Search text.
- * @param {string} category - Category filter value.
- */
 function filterCourses(query, category) {
   var visible = 0;
   $(".course-card-item").each(function () {
@@ -637,17 +585,11 @@ function filterCourses(query, category) {
   }
 }
 
-/* ============================================================
-   SIDEBAR MOBILE TOGGLE
-   ============================================================ */
 $("#sidebarToggle").on("click", function () {
   $(".dashboard-sidebar").toggleClass("sidebar-open");
   $(this).find("i").toggleClass("fa-bars fa-times");
 });
 
-/* ============================================================
-   BACK TO TOP
-   ============================================================ */
 $(window).scroll(function () {
   if ($(this).scrollTop() > 400) {
     $("#backToTop").fadeIn(300);

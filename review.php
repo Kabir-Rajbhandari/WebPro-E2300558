@@ -1,10 +1,4 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: review.php
- * Page: Course Review (Learner)
- * Description: Star rating + text feedback form for completed courses.
- */
 
 require_once 'php/config.php';
 requireRole('learner');

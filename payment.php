@@ -1,10 +1,4 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: payment.php
- * Page: Mock Payment (Learner)
- * Description: Simulates card payment; on success creates enrollment record and redirects to receipt.
- */
 
 require_once 'php/config.php';
 requireRole('learner');

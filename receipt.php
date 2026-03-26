@@ -1,10 +1,4 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: receipt.php
- * Page: Enrollment Receipt (Learner)
- * Description: Generates a printable official enrollment receipt.
- */
 
 require_once 'php/config.php';
 requireRole('learner');

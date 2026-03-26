@@ -1,9 +1,4 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: logout.php
- * Description: Destroys session and clears cookie, then redirects to login.
- */
 
 require_once 'config.php';
 

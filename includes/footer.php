@@ -1,5 +1,5 @@
 <?php
-// ---> Reusable footer component with links, contact info, and scripts
+// ---> Reusable footer component 
 ?>
 <!-- FOOTER SECTION -->
 <footer class="footer-ems">

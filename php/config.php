@@ -1,10 +1,8 @@
 <?php
-// ---> Main configuration file with database connection and helper functions
-
 // ---> Database connection settings
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');         // Change for production
-define('DB_PASS', '');             // Change for production
+define('DB_USER', 'root');         
+define('DB_PASS', '');             
 define('DB_NAME', 'eduskill_db');
 
 // ---> Application configuration constants

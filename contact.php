@@ -1,9 +1,5 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: contact.php
- * Page: Contact Us (Public)
- */
+
 require_once 'php/config.php';
 $pageTitle = 'Contact Us';
 $activeNav = 'contact';

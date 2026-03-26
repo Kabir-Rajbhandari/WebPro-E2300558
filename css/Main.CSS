@@ -1,7 +1,6 @@
-/* ========================================
-   EduSkill Marketplace System - Main Styles
-   Author: Main
-   ======================================== */
+/* 
+   EduSkill Marketplace System - Main Styles 
+   */
 
 /* --- CSS Variables --- */
 :root {
@@ -27,7 +26,6 @@
   --transition: all 0.3s ease;
 }
 
-/* --- Base Reset & Typography --- */
 *,
 *::before,
 *::after {
@@ -802,6 +800,10 @@ img {
   scrollbar-gutter: stable;
   flex-shrink: 0;
   overflow-anchor: none;
+  position: fixed;
+  left: 0;
+  top: 70px;
+  z-index: 1000;
 }
 
 .dashboard-sidebar .sidebar-user {
@@ -923,6 +925,7 @@ img {
   overflow-y: auto;
   overflow-x: hidden;
   overflow-anchor: none;
+  margin-left: 260px;
 }
 
 /* --- Dashboard Stat Cards --- */

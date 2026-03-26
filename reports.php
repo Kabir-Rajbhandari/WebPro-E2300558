@@ -1,10 +1,4 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: reports.php
- * Page: Reports (Officer)
- * Description: Full provider/course analytics report with export summary.
- */
 
 require_once 'php/config.php';
 requireRole('officer');

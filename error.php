@@ -1,10 +1,4 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: error.php
- * Page: Error (All)
- * Description: Custom 404, 403, 500 error pages.
- */
 
 require_once 'php/config.php';
 

@@ -1,9 +1,5 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: faq.php
- * Page: Frequently Asked Questions (Public)
- */
+
 require_once 'php/config.php';
 $pageTitle = 'FAQ';
 $activeNav = 'faq';
@@ -12,9 +8,6 @@ include 'includes/header.php';
 
 <main>
 
-<!-- ============================================================
-     PAGE HEADER
-     ============================================================ -->
 <div class="page-header" style="padding:70px 0 60px;">
   <div class="container text-center">
     <span class="section-tag mb-2 d-inline-block">Help Centre</span>
@@ -37,9 +30,6 @@ include 'includes/header.php';
   </div>
 </div>
 
-<!-- ============================================================
-     FAQ CATEGORIES + ACCORDION
-     ============================================================ -->
 <section class="section-padding">
   <div class="container">
 
@@ -198,9 +188,6 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ============================================================
-     STILL HAVE QUESTIONS CTA
-     ============================================================ -->
 <section class="section-padding" style="background:var(--bg-alt);">
   <div class="container">
     <div class="row align-items-center">

@@ -1,9 +1,4 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: course-form.php
- * Page: Add / Edit Course (Provider)
- */
 
 require_once 'php/config.php';
 requireRole('provider');

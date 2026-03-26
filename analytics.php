@@ -1,10 +1,4 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: analytics.php
- * Page: Analytics (Provider / Officer)
- * Description: Charts and tables for enrollment analytics per provider or system-wide.
- */
 
 require_once 'php/config.php';
 requireLogin();

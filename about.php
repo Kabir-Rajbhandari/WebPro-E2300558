@@ -1,9 +1,5 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: about.php
- * Page: About Us (Public)
- */
+
 require_once 'php/config.php';
 $pageTitle = 'About Us';
 $activeNav = 'about';
@@ -31,7 +27,7 @@ include 'includes/header.php';
         <span class="section-tag mb-2 d-inline-block">Our Purpose</span>
         <h2 style="margin-bottom:16px;">Empowering Malaysia's Workforce</h2>
         <p style="color:var(--text-muted);line-height:1.8;">
-          EduSkill Marketplace (EMS) was established by the Ministry of Human Resources to bridge the
+          EduSkill Marketplace System(EMS) was established by the Ministry of Human Resources to bridge the
           gap between skilled training providers and motivated learners across Malaysia. We believe in
           lifelong learning as the foundation of national competitiveness.
         </p>

@@ -99,9 +99,7 @@ include 'includes/header.php';
     </nav>
   </aside>
 
-  <!-- ============================================================
-       MAIN CONTENT
-       ============================================================ -->
+  <!-- main content section -->
   <div class="dashboard-main">
     <?php renderFlash(); ?>
 

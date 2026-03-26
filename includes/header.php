@@ -1,8 +1,5 @@
 <?php
-// ---> Reusable header component with navigation bar
-// ---> Requires $pageTitle and $activeNav variables to be preset before including
 
-// ---> Set default values for page title and navigation state
 $pageTitle  = $pageTitle  ?? APP_NAME;
 $activeNav  = $activeNav  ?? '';
 $isLoggedIn = !empty($_SESSION['user_id']);

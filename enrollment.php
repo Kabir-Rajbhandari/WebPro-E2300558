@@ -1,10 +1,4 @@
 <?php
-/**
- * EduSkill Marketplace System
- * File: enrollment.php
- * Page: Enrollment Form (Learner)
- * Description: Collects learner info before payment. Validates and redirects to payment.php.
- */
 
 require_once 'php/config.php';
 requireRole('learner');
