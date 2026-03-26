@@ -118,10 +118,10 @@ include 'includes/header.php';
     <div class="row">
       <?php
       $team = [
-        ['name'=>'Dato\' Sri Ahmad Razak','role'=>'Director General','dept'=>'Ministry of Human Resources','icon'=>'fa-user-tie'],
-        ['name'=>'Dr. Faridah Binti Hassan','role'=>'Head of Quality Assurance','dept'=>'Provider Standards Division','icon'=>'fa-user-shield'],
-        ['name'=>'Mr. Tan Wei Ming','role'=>'Platform Director','dept'=>'Digital Transformation Unit','icon'=>'fa-user-cog'],
-        ['name'=>'Puan Siti Norziah','role'=>'Learner Relations Manager','dept'=>'Stakeholder Engagement','icon'=>'fa-user-friends'],
+        ['name'=>'Sri Ahmad Doe','role'=>'Director General','dept'=>'Ministry of Human Resources','icon'=>'fa-user-tie'],
+        ['name'=>'Dr. Faridah Carter','role'=>'Head of Quality Assurance','dept'=>'Provider Standards Division','icon'=>'fa-user-shield'],
+        ['name'=>'Mr. Tan Lee','role'=>'Platform Director','dept'=>'Digital Transformation Unit','icon'=>'fa-user-cog'],
+        ['name'=>'Puan Martinez','role'=>'Learner Relations Manager','dept'=>'Stakeholder Engagement','icon'=>'fa-user-friends'],
       ];
       foreach ($team as $i => $member): ?>
       <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="<?= $i*80 ?>">
