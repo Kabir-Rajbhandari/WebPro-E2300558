@@ -4,7 +4,7 @@
  * Kabir Rajbhandari - E2300558
  * Sailesh Maharjan - E2300572
  * Saksham Sharma Sedhai - E2300573
- * combine CSS file
+ * combine JS file
 
 /* INITIALIZATION */
 $(document).ready(function () {
