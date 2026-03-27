@@ -3,6 +3,19 @@
 require_once '../php/config.php';
 $pageTitle = 'FAQ';
 $activeNav = 'faq';
+
+// ---> Fetch live platform statistics from database (same as home page)
+$db = getDbConnection();
+$statsQuery = $db->query("SELECT
+    (SELECT COUNT(*) FROM users WHERE role='learner') AS total_learners,
+    (SELECT COUNT(*) FROM courses) AS total_courses,
+    (SELECT COUNT(*) FROM providers WHERE status='approved') AS total_providers,
+    (SELECT COUNT(*) FROM enrollments WHERE paymentStatus='paid') AS total_enrollments,
+    (SELECT COALESCE(ROUND(AVG(rating), 1), 0) FROM reviews) AS avg_rating
+");
+$stats = $statsQuery->fetch_assoc();
+$db->close();
+
 include '../includes/header.php';
 ?>
 
@@ -192,7 +205,7 @@ include '../includes/header.php';
   <div class="container">
     <div class="row align-items-center">
 
-      <!-- Left: Stats -->
+      <!-- Left: Dynamic Stats (matches home page data source) -->
       <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
         <span class="section-tag mb-2 d-inline-block">Why EduSkill?</span>
         <h2 style="margin-bottom:16px;">Trusted by Thousands of Malaysians</h2>
@@ -202,23 +215,44 @@ include '../includes/header.php';
         </p>
         <div class="row">
           <?php
-          $stats = [
-            ['icon'=>'fa-user-graduate','color'=>'blue', 'num'=>'10,000+','label'=>'Learners Enrolled'],
-            ['icon'=>'fa-building',     'color'=>'purple','num'=>'50+',    'label'=>'Verified Providers'],
-            ['icon'=>'fa-book',         'color'=>'green', 'num'=>'500+',   'label'=>'Courses Available'],
-            ['icon'=>'fa-star',         'color'=>'orange','num'=>'4.5/5',  'label'=>'Avg Course Rating'],
+          $dynamicStats = [
+            [
+              'icon'  => 'fa-user-graduate',
+              'color' => 'blue',
+              'num'   => number_format($stats['total_learners']) . '+',
+              'label' => 'Learners Enrolled',
+            ],
+            [
+              'icon'  => 'fa-building',
+              'color' => 'purple',
+              'num'   => number_format($stats['total_providers']) . '+',
+              'label' => 'Verified Providers',
+            ],
+            [
+              'icon'  => 'fa-book',
+              'color' => 'green',
+              'num'   => number_format($stats['total_courses']) . '+',
+              'label' => 'Courses Available',
+            ],
+            [
+              'icon'  => 'fa-star',
+              'color' => 'orange',
+              'num'   => ($stats['avg_rating'] > 0 ? number_format($stats['avg_rating'], 1) : '–') . '/5',
+              'label' => 'Avg Course Rating',
+            ],
           ];
-          foreach ($stats as $i => $s): ?>
-          <div class="col-6 mb-3" data-aos="fade-up" data-aos-delay="<?= $i*60 ?>">
+          foreach ($dynamicStats as $i => $s): ?>
+          <div class="col-6 mb-3" data-aos="fade-up" data-aos-delay="<?= $i * 60 ?>">
             <div class="feature-card" style="padding:18px 16px;display:flex;align-items:center;gap:12px;">
               <div class="feature-icon" style="width:40px;height:40px;flex-shrink:0;
-                <?= $s['color']==='purple'?'background:#fdf4ff;color:var(--accent);':
-                   ($s['color']==='green' ?'background:#ecfdf5;color:var(--success);':
-                   ($s['color']==='orange'?'background:#fffbeb;color:var(--warning);':'')) ?>">
+                <?= $s['color']==='purple' ? 'background:#fdf4ff;color:var(--accent);' :
+                   ($s['color']==='green'  ? 'background:#ecfdf5;color:var(--success);' :
+                   ($s['color']==='orange' ? 'background:#fffbeb;color:var(--warning);' : '')) ?>">
                 <i class="fas <?= $s['icon'] ?>" style="font-size:.9rem;"></i>
               </div>
               <div>
-                <div style="font-size:1.2rem;font-weight:800;color:var(--primary);line-height:1;"><?= $s['num'] ?></div>
+                <div class="faq-stat-num" style="font-size:1.2rem;font-weight:800;color:var(--primary);line-height:1;"
+                     data-target="<?= $s['num'] ?>"><?= $s['num'] ?></div>
                 <div style="font-size:.75rem;color:var(--text-muted);margin-top:2px;"><?= $s['label'] ?></div>
               </div>
             </div>
